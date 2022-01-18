@@ -1,0 +1,48 @@
+<!-- //It varies according to your application. If you want to render a static page then go for an HTML file
+// and if you want to render a dynamic page where your data coming from various sources then
+// you must choose an EJS file. -->
+
+<!-- include header -->
+
+<%-include('include/_header') %>
+<!-- </incluse header -->
+
+<!-- <main-site -->
+    <main id="main-site">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+      <a href="/add-user" class="border-shadow">
+    <span class="text-gradient">NEW USERS<i class="far fa-user"></i></span>
+     </a>
+            </div>
+             <!-- form handling -->
+             <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>@Email</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <%-include('include/_show') %>
+
+
+                    </tbody>
+                </table>
+            </form>
+            
+        </div>
+    </main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+
+<%-include('include/_footer') %>
+<!-- </incluse footer -->
+
